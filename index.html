@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Cathy">
+  <meta name="description" content="Halle Animation">
+  <title>Halle Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="header">CSS Transform, Transition, and Animation Properties</h1>
+  </header>
+  <main>
+    <h2>Transform</h2>
+    <section>
+      <article>
+        <p>
+          THe CSS Transform property lets you move, scale, skew and rotate HTML elements.
+        </p>
+      </article>
+      <article>
+        <div class="div1"><img src="img/My project.png" alt="" class="img1"></div>
+        <button type="button" class="btn-slide">transform: translate(20px)</button>
+      </article>
+      <article>
+        <div class="div2"><img src="img/My project.png" alt="" class="img2"></div>
+        <button type="button" class="btn-scale">transform: scale(30%, 30%)</button>
+      </article>
+      <article>
+        <div class="div3"><img src="img/My project.png" alt="" class="img3"></div>
+        <button type="button" class="btn-rotate">transform: rotate(180deg)</button>
+      </article>
+      <article>
+        <div class="div3a"><img src="img/My project.png" alt="" class="img3a"></div>
+        <button type="button" class="btn-all3">transform: translate(20px) scale(30%&nbsp;30%) rotate(180deg)</button>
+      </article>
+    </section>
+    <h2>Transform With Transition</h2>
+    <section>
+      <article>
+        <p>
+          CSS Transition is a type of animation that allows you to change property values smoothly over time.  is the change from one CSS style to another over time. 
+        </p>
+      </article>
+      <article>
+        <div class="div4"><img src="img/My project.png" alt="" class="img4"></div>
+        <button type="button" class="btn-slideT">transform: translate(20px)<br>transition: transform 2s 0.5s</button>
+      </article>
+      <article>
+        <div class="div5"><img src="img/My project.png" alt="" class="img5"></div>
+        <button type="button" class="btn-shrinkT">transform: scale(10%, 10%)<br>transition: transform 3s 0.5s</button>
+      </article>
+      <article>
+        <div class="div6"><img src="img/My project.png" alt="" class="img6"></div>
+        <button type="button" class="btn-rotateT">transform: rotateX(180deg)<br>transition: transform 1.75s 0.5s</button>
+      </article>
+      <article>
+        <div class="div6a"><img src="img/My project.png" alt="" class="img6a"></div>
+        <button type="button" class="btn-all3T">transform: rotateX(180deg)<br>transition: transform 1.75s 0.5s</button>
+      </article>
+    </section>
+    <h2>Transform With Animation</h2>
+    <section>
+      <article>
+        <p>
+          CSS Animation allows more control over an animation than transitions.CSS calculates all the value in between. Define the intermediate steps in the animation sequence by using @keyframes
+        </p>
+      </article>
+      <article>
+        <div class="div7"><img src="img/My project.png" alt="" class="img7"></div>
+        <button type="button" class="btn-slideA">Shrink & Grow Halle</button>
+      </article>
+      <article>
+        <div class="div8"><img src="img/My project.png" alt="" class="img8"></div>
+        <button type="button" class="btn-shrinkA">Skew Halle Left & Right</button>
+      </article>
+      <article>
+        <div class="div9"><img src="img/My project.png" alt="" class="img9"></div>
+        <button type="button" class="btn-rotateA">Rotate & Flip Halle</button>
+      </article>
+      <article>
+        <div class="div9a"><img src="img/My project.png" alt="" class="img9a"></div>
+        <button type="button" class="btn-all3A">Rotate & Flip Halle</button>
+      </article>
+    </section>
+  </main>
+</body>
+<script>
+  const image1 = document.querySelector(".img1");
+  const image2 = document.querySelector(".img2");
+  const image3 = document.querySelector(".img3");
+  const image3a = document.querySelector(".img3a");
+  const image4 = document.querySelector(".img4");
+  const image5 = document.querySelector(".img5");
+  const image6 = document.querySelector(".img6");
+  const image6a = document.querySelector(".img6a");
+  const image7 = document.querySelector(".img7");
+  const image8 = document.querySelector(".img8");
+  const image9 = document.querySelector(".img9");
+  const image9a = document.querySelector(".img9a");
+  const btnSlide = document.querySelector(".btn-slide");
+  const btnScale = document.querySelector(".btn-scale");
+  const btnRotate = document.querySelector(".btn-rotate");
+  const btnAll3 = document.querySelector(".btn-all3");
+  const btnSlideT = document.querySelector(".btn-slideT");
+  const btnShrinkT = document.querySelector(".btn-shrinkT");
+  const btnRotateT = document.querySelector(".btn-rotateT");
+  const btnAll3T = document.querySelector(".btn-all3T");
+  const btnSlideA = document.querySelector(".btn-slideA");
+  const btnShrinkA = document.querySelector(".btn-shrinkA");
+  const btnRotateA = document.querySelector(".btn-rotateA");
+  const btnAll3A = document.querySelector(".btn-all3A");
+  btnSlide.addEventListener("click", () => {
+    image1.classList.toggle("slide");
+  })
+  btnScale.addEventListener("click", () => {
+    image2.classList.toggle("scale");
+  })
+  btnRotate.addEventListener("click", () => {
+    image3.classList.toggle("rotate");
+  })
+  btnAll3.addEventListener("click", () => {
+    image3a.classList.toggle("all3");
+  })
+  btnSlideT.addEventListener("click", () => {
+    image4.classList.toggle("slideT");
+  })
+  btnShrinkT.addEventListener("click", () => {
+    image5.classList.toggle("shrinkT");
+  })
+  btnRotateT.addEventListener("click", () => {
+    image6.classList.toggle("rotateT");
+  })
+  btnAll3T.addEventListener("click", () => {
+    image6a.classList.toggle("all3T");
+  })
+  btnSlideA.addEventListener("click", () => {
+    image7.classList.toggle("left")
+    if (!image7.classList.contains("left")) {
+      image7.classList.toggle("right");
+    }
+    if ((image7.classList.contains("left") && image7.classList.contains("right"))) {
+      image7.classList.toggle("right");
+    }
+  })
+  btnShrinkA.addEventListener("click", () => {
+    image8.classList.toggle("shrink")
+    if (!image8.classList.contains("shrink")) {
+      image8.classList.toggle("grow");
+    }
+    if ((image8.classList.contains("shrink") && image8.classList.contains("grow"))) {
+      image8.classList.toggle("grow");
+    }
+  })
+  btnRotateA.addEventListener("click", () => {
+    image9.classList.toggle("forward")
+    if (!image9.classList.contains("forward")) {
+      image9.classList.toggle("backward");
+    }
+    if ((image9.classList.contains("forward") && image9.classList.contains("backward"))) {
+      image9.classList.toggle("backward");
+    }
+  })
+  btnAll3A.addEventListener("click", () => {
+    image9a.classList.toggle("one")
+    if (!image9a.classList.contains("one")) {
+      image9a.classList.toggle("two");
+    }
+    if ((image9a.classList.contains("one") && image9a.classList.contains("two"))) {
+      image9a.classList.toggle("two");
+    }
+  })
+</script>
+
+</html>
